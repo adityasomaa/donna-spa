@@ -16,24 +16,30 @@ and a clean, calming escape from the busy streets of Kuta — at honest, fair pr
   (*lulur*, *creambath*, *kamboja*).
 
 ## Colour palette
+Derived directly from the official Donna Spa logo (magenta-pink + green on white).
+
 | Token | Hex | Use |
 |-------|-----|-----|
-| Sand (base) | `#F5F0E6` | Page background |
-| Forest (ink) | `#1C2E27` | Dark sections, headings on light |
-| Jade | `#2F5D50` | Primary brand green / buttons |
-| Sage | `#8AA396` | Secondary / muted accents |
-| Clay | `#C47A54` | Warm terracotta accent / highlights |
-| Gold | `#BE9F66` | Premium detail / dividers |
-| Charcoal | `#20231F` | Body text |
+| Sand (blush base) | `#FFF5FA` | Page background |
+| Sand-deep | `#FCE6F1` | Soft pink section background |
+| Forest (plum) | `#3D0A2A` | Dark sections + headings on light |
+| Jade (pink) | `#E11484` | **Primary** — buttons, links, CTA band |
+| Jade-light | `#F25CA8` | Light pink / gradients |
+| Clay (green) | `#159A4E` | Green accent on light (eyebrows, tags) |
+| Gold (leaf green) | `#7CC242` | Bright accent on dark (underlines, stars area) |
+| Sage (mauve) | `#E6B6D0` | Muted text on dark plum |
+| Charcoal | `#3A2230` | Body text (plum-tinted) |
+| Cream (white) | `#FFFFFF` | Cards & text on dark |
 
 ## Typography
-- **Display / headings:** *Fraunces* (boutique editorial serif).
+- **Display / headings:** *Fraunces* (editorial serif — premium counterpoint to the rounded logo wordmark).
 - **Body / UI:** *Plus Jakarta Sans*.
 
-## Motif
-- Frangipani (*kamboja*) flower & tropical leaf line-art.
-- Soft organic blob shapes, subtle paper grain, generous whitespace.
-- Placeholder imagery rendered as bespoke SVG/gradient graphics (no stock photos yet).
-
-## Logo
-Wordmark **Donna** in Fraunces italic + `SPA` letterspaced, paired with a minimal frangipani mark.
+## Logo & motif
+- Official logo: feminine face profile + **D** monogram cradled by green leaves, with the
+  **Donna Spa** wordmark in rounded magenta-pink sans.
+- Source `WhatsApp Image…jpeg` → processed into transparent **`public/logo.png`** (full lockup)
+  and **`public/emblem.png`** (icon only). Emblem also powers the favicon (`app/icon.png`) and
+  apple touch icon.
+- Decorative motif: frangipani/leaf line-art, soft organic blobs, paper grain.
+- Section imagery uses bespoke pink/green SVG graphics as placeholders (no stock photos yet).

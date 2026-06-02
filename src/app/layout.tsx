@@ -40,6 +40,7 @@ export const metadata: Metadata = {
     description: site.description,
     type: "website",
     locale: "en_US",
+    images: [{ url: "/logo.png", width: 477, height: 311, alt: "Donna Spa" }],
   },
 };
 

@@ -3,9 +3,9 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { nav, site, whatsappLink } from "@/lib/site";
-import Frangipani from "./graphics/Frangipani";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -49,28 +49,17 @@ export default function Navbar() {
         <nav className="container-x flex h-[72px] items-center justify-between">
           <Link
             href="/"
-            className="flex items-center gap-2.5"
+            className="flex items-center"
             aria-label="Donna Spa home"
           >
-            <Frangipani
-              className={`h-8 w-8 transition-colors ${
-                onDark ? "text-cream" : "text-jade"
-              }`}
+            <Image
+              src="/logo.png"
+              alt="Donna Spa"
+              width={477}
+              height={311}
+              priority
+              className="h-11 w-auto md:h-12"
             />
-            <span
-              className={`font-display text-xl italic tracking-wide transition-colors ${
-                onDark ? "text-cream" : "text-forest"
-              }`}
-            >
-              Donna
-              <span
-                className={`ml-1.5 not-italic text-[0.62em] uppercase tracking-[0.35em] ${
-                  onDark ? "text-gold" : "text-jade"
-                }`}
-              >
-                SPA
-              </span>
-            </span>
           </Link>
 
           {/* Desktop nav */}

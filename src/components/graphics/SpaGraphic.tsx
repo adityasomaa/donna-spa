@@ -12,11 +12,11 @@ type Variant =
   | "petals";
 
 const palettes: Record<string, [string, string]> = {
-  jade: ["#2f5d50", "#1c2e27"],
-  sage: ["#8aa396", "#5f7a6c"],
-  clay: ["#c47a54", "#a35d3b"],
-  gold: ["#be9f66", "#9c7f48"],
-  cream: ["#ece4d3", "#d9cdb4"],
+  jade: ["#e11484", "#a8105f"], // pink
+  sage: ["#4eb85a", "#2e8b57"], // bright green
+  clay: ["#159a4e", "#0d6b37"], // deep green
+  gold: ["#7cc242", "#4e8f2a"], // leaf green
+  cream: ["#fbd9ea", "#f3aacf"], // blush pink
 };
 
 export default function SpaGraphic({

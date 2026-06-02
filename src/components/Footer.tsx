@@ -1,15 +1,20 @@
 import Link from "next/link";
+import Image from "next/image";
 import { nav, site, whatsappLink } from "@/lib/site";
-import Frangipani from "./graphics/Frangipani";
 
 export default function Footer() {
   return (
     <footer className="relative z-10 bg-forest text-cream">
       <div className="container-x grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-4">
         <div className="lg:col-span-1">
-          <div className="flex items-center gap-2.5">
-            <Frangipani className="h-9 w-9 text-gold" />
-            <span className="font-display text-2xl italic">Donna Spa</span>
+          <div className="inline-flex rounded-2xl bg-white/95 px-4 py-3">
+            <Image
+              src="/logo.png"
+              alt="Donna Spa"
+              width={477}
+              height={311}
+              className="h-16 w-auto"
+            />
           </div>
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-sage">
             {site.tagline}. {site.taglineId}

@@ -1,17 +1,17 @@
 @import "tailwindcss";
 
 @theme {
-  /* Brand colours */
-  --color-sand: #f5f0e6;
-  --color-sand-deep: #ece4d3;
-  --color-forest: #1c2e27;
-  --color-jade: #2f5d50;
-  --color-jade-light: #3d7263;
-  --color-sage: #8aa396;
-  --color-clay: #c47a54;
-  --color-gold: #be9f66;
-  --color-charcoal: #20231f;
-  --color-cream: #fbf8f1;
+  /* Brand colours — derived from the Donna Spa logo (pink + green) */
+  --color-sand: #fff5fa; /* blush-white page background */
+  --color-sand-deep: #fce6f1; /* soft pink section */
+  --color-forest: #3d0a2a; /* deep plum — dark sections & headings */
+  --color-jade: #e11484; /* primary magenta-pink */
+  --color-jade-light: #f25ca8; /* light pink */
+  --color-sage: #e6b6d0; /* muted mauve — text on dark */
+  --color-clay: #159a4e; /* green accent on light */
+  --color-gold: #7cc242; /* bright leaf-green accent on dark */
+  --color-charcoal: #3a2230; /* body text (plum-tinted) */
+  --color-cream: #ffffff; /* white — cards & text on dark */
 
   /* Fonts wired from next/font */
   --font-display: var(--font-fraunces), Georgia, serif;

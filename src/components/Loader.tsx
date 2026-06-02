@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
-import Frangipani from "./graphics/Frangipani";
 
 export default function Loader() {
   const [done, setDone] = useState(false);
@@ -30,24 +30,23 @@ export default function Loader() {
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         >
           <motion.div
-            initial={{ scale: 0.7, opacity: 0, rotate: -30 }}
-            animate={{ scale: 1, opacity: 1, rotate: 0 }}
+            initial={{ scale: 0.78, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+            className="rounded-3xl bg-white/95 px-7 py-6"
           >
-            <Frangipani className="h-16 w-16 text-cream" />
+            <Image
+              src="/logo.png"
+              alt="Donna Spa"
+              width={477}
+              height={311}
+              priority
+              className="h-24 w-auto sm:h-28"
+            />
           </motion.div>
 
           <motion.div
-            className="mt-6 overflow-hidden"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
-          >
-            <p className="font-display text-2xl italic tracking-wide">Donna Spa</p>
-          </motion.div>
-
-          <motion.div
-            className="mt-5 h-px w-40 overflow-hidden bg-cream/20"
+            className="mt-8 h-px w-40 overflow-hidden bg-cream/20"
           >
             <motion.div
               className="h-full bg-gold"
