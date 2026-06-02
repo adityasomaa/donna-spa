@@ -32,6 +32,11 @@ export default function Navbar() {
     setOpen(false);
   }, [pathname]);
 
+  // Inner pages open with a dark hero; the home page hero is light.
+  // While at the top of a dark-hero page (and not showing the solid bar),
+  // the navbar uses light colours so it stays visible.
+  const onDark = !scrolled && !open && pathname !== "/";
+
   return (
     <>
       <header
@@ -47,9 +52,24 @@ export default function Navbar() {
             className="flex items-center gap-2.5"
             aria-label="Donna Spa home"
           >
-            <Frangipani className="h-8 w-8 text-jade" />
-            <span className="font-display text-xl italic tracking-wide text-forest">
-              Donna<span className="ml-1.5 not-italic text-[0.62em] uppercase tracking-[0.35em] text-jade">Spa</span>
+            <Frangipani
+              className={`h-8 w-8 transition-colors ${
+                onDark ? "text-cream" : "text-jade"
+              }`}
+            />
+            <span
+              className={`font-display text-xl italic tracking-wide transition-colors ${
+                onDark ? "text-cream" : "text-forest"
+              }`}
+            >
+              Donna
+              <span
+                className={`ml-1.5 not-italic text-[0.62em] uppercase tracking-[0.35em] ${
+                  onDark ? "text-gold" : "text-jade"
+                }`}
+              >
+                SPA
+              </span>
             </span>
           </Link>
 
@@ -62,7 +82,13 @@ export default function Navbar() {
                   <Link
                     href={item.href}
                     className={`relative text-sm tracking-wide transition-colors ${
-                      active ? "text-jade" : "text-forest/70 hover:text-forest"
+                      active
+                        ? onDark
+                          ? "text-gold"
+                          : "text-jade"
+                        : onDark
+                          ? "text-cream/80 hover:text-cream"
+                          : "text-forest/70 hover:text-forest"
                     }`}
                   >
                     {item.label}
@@ -79,12 +105,14 @@ export default function Navbar() {
           </ul>
 
           <a
-            href={whatsappLink(
-              "Hi Donna Spa, I'd like to book a treatment."
-            )}
+            href={whatsappLink("Hi Donna Spa, I'd like to book a treatment.")}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden rounded-full bg-jade px-5 py-2.5 text-sm font-medium text-cream transition-colors hover:bg-forest lg:inline-flex"
+            className={`hidden rounded-full px-5 py-2.5 text-sm font-medium transition-colors lg:inline-flex ${
+              onDark
+                ? "bg-gold text-forest hover:bg-cream"
+                : "bg-jade text-cream hover:bg-forest"
+            }`}
           >
             Book via WhatsApp
           </a>
@@ -98,15 +126,21 @@ export default function Navbar() {
           >
             <motion.span
               animate={open ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}
-              className="block h-[2px] w-6 rounded-full bg-forest"
+              className={`block h-[2px] w-6 rounded-full transition-colors ${
+                onDark ? "bg-cream" : "bg-forest"
+              }`}
             />
             <motion.span
               animate={open ? { opacity: 0 } : { opacity: 1 }}
-              className="block h-[2px] w-6 rounded-full bg-forest"
+              className={`block h-[2px] w-6 rounded-full transition-colors ${
+                onDark ? "bg-cream" : "bg-forest"
+              }`}
             />
             <motion.span
               animate={open ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }}
-              className="block h-[2px] w-6 rounded-full bg-forest"
+              className={`block h-[2px] w-6 rounded-full transition-colors ${
+                onDark ? "bg-cream" : "bg-forest"
+              }`}
             />
           </button>
         </nav>
